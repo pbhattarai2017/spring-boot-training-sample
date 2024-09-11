@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:16.2
+    restart: always
+    environment:
+      POSTGRES_DB: myproject
+      POSTGRES_USER: myproject
+      POSTGRES_PASSWORD: secretpass
+    ports:
+      - "5434:5432"

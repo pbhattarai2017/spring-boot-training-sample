@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+	<h1>Dashboard</h1>
+	<div>
+		<p>Your Information</p>
+		<a href="/logout">Logout</a>
+		<div>
+			<ul>
+				<li th:text="${user.username}"></li>
+				<li th:text="${user.password} + ' (bad practice)'"></li>
+				<li th:text="${user.fullname}"></li>
+				<li th:text="${user.email}"></li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+</html>

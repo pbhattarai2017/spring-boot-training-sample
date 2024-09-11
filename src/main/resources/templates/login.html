@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/css/style.css" />
+	</head>
+	<body>
+		<h1>Login</h1>
+		<div>
+			<form action="/login" method="post">
+				<p>
+					<label for="username">Username</label>
+					<input type="text" id="username" name="username"/>
+				</p>
+				<p>
+					<label for="password">Password</label>
+					<input type="password" id="password" name="password"/>
+				</p>
+				
+				<p th:if="${error?.login}">
+					<span class="error" th:text="${error.login}"></span>
+				</p>
+
+				<input type="submit" value="Login">
+			</form>
+		</div>
+	</body>
+</html>

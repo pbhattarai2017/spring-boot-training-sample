@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/css/style.css" />
+	</head>
+	<body>
+		<h1>Registration</h1>
+		<div>
+			<form action="/register" method="post">
+				<p>
+					<label for="fullname">Fullname</label>
+					<input type="text" id="fullname" name="fullname"/>
+				</p>
+				<p>
+					<label for="username">Username</label>
+					<input type="text" id="username" name="username"/>
+					<span class="error" th:if="${error?.username}" th:text="${error.username}"></span>
+				</p>
+				<p>
+					<label for="email">Email</label>
+					<input type="text" id="email" name="email"/>
+					<span class="error" th:if="${error?.email}" th:text="${error.email}"></span>
+				</p>
+				<p>
+					<label for="password">Password</label>
+					<input type="password" id="password" name="password"/>
+				</p>
+
+				<input type="submit" value="Register">
+			</form>
+		</div>
+	</body>
+</html>
